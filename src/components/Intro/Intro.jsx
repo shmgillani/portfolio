@@ -1,5 +1,6 @@
 import React from "react";
 import "./intro.scss";
+import webDevelopment from "../../assets/gifs/web-gif-with-background.gif";
 
 const Intro = () => {
   return (
@@ -13,12 +14,13 @@ const Intro = () => {
         Express.js, React.js, and Node.js
         <span className="text-[#4bffa5]">.</span>
       </p>
-      <div>
+      {/* <div>
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] white react-circle-1"></div>
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] green react-circle-2"></div>
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] green react-circle-3"></div>
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] white react-circle-4"></div>
-      </div>
+      </div> */}
+      <img src={webDevelopment} className=""/>
     </div>
   );
 };

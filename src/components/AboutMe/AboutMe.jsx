@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutMe.scss";
+import "../../App.css";
 import { ReactComponent as Number1 } from "../../assets/icons/number1.svg";
 import { ReactComponent as Number2 } from "../../assets/icons/number2.svg";
 import { ReactComponent as Number3 } from "../../assets/icons/number3.svg";
