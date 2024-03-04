@@ -1,23 +1,23 @@
 import React from "react";
-import "../../App.css";
-import { ReactComponent as Number1 } from "../../assets/icons/number1.svg";
-import { ReactComponent as Number2 } from "../../assets/icons/number2.svg";
-import { ReactComponent as Number3 } from "../../assets/icons/number3.svg";
+import "../App.css";
+import { ReactComponent as Number1 } from "../assets/icons/number1.svg";
+import { ReactComponent as Number2 } from "../assets/icons/number2.svg";
+import { ReactComponent as Number3 } from "../assets/icons/number3.svg";
 
-const Contact = () => {
+const AboutMe = () => {
   return (
     <div className="w-full px-5 sm:px-10 pt-20">
       <div className="w-full font-roboto font-[400] text-[18px] sm:text-[28px] text-white py-2">
-        <span className="text-[#4bffa5]">Contact</span>
+        <span className="text-[#4bffa5]">About Me</span>
       </div>
       <div className="divider"></div>
       <div className="pt-5 flex flex-col gap-3 sm:flex-row sm:gap-48">
         <p className="w-full sm:w-[50%] font-roboto font-[400] text-[24px] sm:text-[28px] text-white leading-snug">
-          Feel free to drop me an email at <span className="text-[#4bffa5]">syedhasanmehdi1999@gmail.com</span> if you have a project idea or design!
-          I'll do my best to respond within 24 hours. Looking forward to hearing
-          from you!
+          I specialize in creating captivating websites on a global scale. Got
+          you design ready? Feel free to email me, and I'll provide you with a
+          time and cost estimate.
         </p>
-        {/* <div className="w-full sm:w-[50%] flex flex-col gap-2">
+        <div className="w-full sm:w-[50%] flex flex-col gap-2">
           <p className="w-full font-roboto font-[600] text-[24px] sm:text-[28px] text-[#4bffa5] leading-snug">
             Services Available:
           </p>
@@ -44,10 +44,10 @@ const Contact = () => {
             </div>
             <div className="divider"></div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default AboutMe;

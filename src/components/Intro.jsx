@@ -1,6 +1,8 @@
 import React from "react";
-import "./intro.scss";
-import webDevelopment from "../../assets/gifs/web-gif-with-background.gif";
+// import webDevelopment from "../assets/gifs/web-gif-with-background.gif";
+// import webDevelopment from "../assets/images/webDevelopment.jpg"
+import webDevelopment from "../assets/images/webDevelopment1.png";
+// import webDevelopment from "../assets/images/webDevelopment-illustration1.png"
 
 const Intro = () => {
   return (
@@ -20,7 +22,7 @@ const Intro = () => {
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] green react-circle-3"></div>
         <div className="circle w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] rounded-[50%] white react-circle-4"></div>
       </div> */}
-      <img src={webDevelopment} className=""/>
+      <img src={webDevelopment} className="w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] rounded-[10px]" />
     </div>
   );
 };
