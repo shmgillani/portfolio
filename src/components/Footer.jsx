@@ -3,7 +3,7 @@ import "../App.css";
 
 const Footer = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 pb-5">
       <div className="divider"></div>
       <div className="flex items-end gap-5 pt-5 pl-5">
       <span className="font-montserrat font-[700] text-[16px] sm:text-[18px] text-white tracking-[3px]">
