@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div
-        className={`${isNavOpen ? "main-parent" : "close-parent"} bg-slate-900`}
+        className={`main-parent ${isNavOpen ? "active" : "notactive"} bg-slate-900`}
       >
         <Router>
           <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />

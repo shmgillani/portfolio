@@ -1,10 +1,10 @@
 import React from "react";
 import { ReactComponent as HamburgerButton } from "../assets/icons/hamburgerButton.svg";
 import { Link } from "react-router-dom";
-import "./components.scss"
+import "./components.scss";
 
 const Header = ({ isNavOpen, setIsNavOpen }) => {
-  const handleNavOpen = () => {
+  const handleNavOpen = async () => {
     setIsNavOpen(!isNavOpen);
   };
 
@@ -35,8 +35,12 @@ const Header = ({ isNavOpen, setIsNavOpen }) => {
           />
         </div>
       </div>
-      {isNavOpen && (
-        <div className={`${isNavOpen ? "menu-form" : "menu-close"} flex flex-col justify-center items-center h-screen w-[240px] bg-slate-600 gap-10`}>
+      {/* {isNavOpen && ( */}
+        <div
+          className={` menu-form ${
+            isNavOpen ? "active" : "notactive"
+          } flex flex-col justify-center items-center h-screen w-[240px] bg-slate-600 gap-10`}
+        >
           <span className="font-montserrat font-[500] text-[22px] sm:text-[28px] text-white cursor-pointer">
             About
           </span>
@@ -47,7 +51,7 @@ const Header = ({ isNavOpen, setIsNavOpen }) => {
             Contact
           </span>
         </div>
-      )}
+      {/* )} */}
     </>
   );
 };
