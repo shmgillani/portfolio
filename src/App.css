@@ -48,17 +48,13 @@
 
 .main-parent {
   height: 100%;
+  transition: transform 0.3s ease-in 0s;
   top: unset;
-  transform: translateX(-0px);
-  transition: transform 0.3s ease-in ;
+  transform: translateX(240px);
   position: fixed;
   left: 0;
   right: 0;
 }
-.main-parent.active {
-  transform: translateX(240px);
-  transition: transform 0.2s ease-in ;
-}
-.main-parent.notactive{
-  transform: translateX(-0px);
+.close-parent {
+  transition: transform 0.3s ease-out 0s;
 }

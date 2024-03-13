@@ -40,7 +40,7 @@ const Work = () => {
       <div className="divider"></div>
       <div className="pt-5 flex flex-col gap-3 sm:flex-row sm:gap-20">
         {projects?.map((project) => (
-          <div className="w-full sm:w-[50%] md:w-[30%] flex flex-col gap-2">
+          <div className="w-[30%] flex flex-col gap-2">
             <p className="w-full font-roboto font-[400] text-[22px] sm:text-[28px] text-white">
               {project?.title}
             </p>
