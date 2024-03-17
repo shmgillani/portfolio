@@ -3,6 +3,8 @@ import Input from "../common/Input";
 import { useFormik } from "formik";
 import { contactSchema } from "../../utils/validationSchema";
 import InputTextArea from "../common/InputTextArea";
+import PrimaryButton from "../common/PrimaryButton";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const initialValues = {
@@ -19,6 +21,23 @@ const ContactForm = () => {
 
     onSubmit: async (values) => {
       console.log("create values", values);
+      const serviceId = "service_s8s9yx5";
+      const templateId = "template_0g7a7a9";
+      const publicKey = "MUifSMFgHlfDEU31D";
+
+      const templateParams = {
+        from_name: values?.firstName + values?.lastName,
+        from_email: values?.email,
+        to_name: "SHM GILLANI",
+        message: values?.message,
+      };
+
+      emailjs
+        ?.send(serviceId, templateId, templateParams, publicKey)
+        .then((response) => {
+          console.log('response', response);
+        })
+        .catch((err) => console.log("err", err));
     },
   });
 
@@ -39,7 +58,7 @@ const ContactForm = () => {
         <Input
           label="First Name"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"
-          placeholder="First Name"
+          placeholder="Shm"
           inputDivClass="w-full lg:w-[50%]"
           name="firstName"
           value={firstName}
@@ -52,7 +71,7 @@ const ContactForm = () => {
         <Input
           label="Last Name"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"
-          placeholder="Last Name"
+          placeholder="Gillani"
           inputDivClass="w-full lg:w-[50%]"
           name="lastName"
           value={lastName}
@@ -67,7 +86,7 @@ const ContactForm = () => {
         <Input
           label="Inquiry"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"
-          placeholder="Inquiry"
+          placeholder="Frontend/Backend/Devops"
           inputDivClass="w-full lg:w-[50%]"
           name="inquiry"
           value={inquiry}
@@ -80,7 +99,7 @@ const ContactForm = () => {
         <Input
           label="Email"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"
-          placeholder="Email"
+          placeholder="example@gmail.com"
           inputDivClass="w-full lg:w-[50%]"
           name="email"
           value={email}
@@ -94,7 +113,7 @@ const ContactForm = () => {
       <InputTextArea
         label="Message"
         labelClassName="font-poppins font-[400] text-[14px] text-white mb-2"
-        placeholder="Message"
+        placeholder="Hello..."
         divClassName="w-full mt-5"
         name="message"
         value={message}
@@ -104,6 +123,15 @@ const ContactForm = () => {
         error={errors.message}
         touched={touched.message}
       />
+      <div className="text-end mt-5">
+        <PrimaryButton
+          className={
+            "w-[30%] font-montserrat text-[14px] text-center font-[500] h-[45px] rounded-[5px]"
+          }
+          label="Submit"
+          onClick={handleSubmit}
+        />
+      </div>
     </div>
   );
 };

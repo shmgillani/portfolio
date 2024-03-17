@@ -14,6 +14,6 @@ export const contactSchema = Yup.object().shape({
     .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Invalid email address")
     .required("Email is required"),
   message: Yup.string()
-    .max(25, "Message cannot be more than 25 characters")
+    .max(250, "Message cannot be more than 250 characters")
     .required("Message is required"),
 });
