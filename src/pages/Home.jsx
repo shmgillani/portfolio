@@ -4,13 +4,13 @@ import AboutMe from "../components/AboutMe";
 import Contact from "../components/Contact";
 import Work from "../components/Work";
 
-const Home = () => {
+const Home = ({aboutRef, workRef, contactRef}) => {
   return (
     <div className="w-full h-full">
       <Intro />
-      <Work />
-      <AboutMe />
-      <Contact />
+      <Work workRef={workRef}/>
+      <AboutMe aboutRef={aboutRef}/>
+      <Contact contactRef={contactRef}/>
     </div>
   );
 };

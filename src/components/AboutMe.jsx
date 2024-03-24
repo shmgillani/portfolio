@@ -4,15 +4,15 @@ import { ReactComponent as Number1 } from "../assets/icons/number1.svg";
 import { ReactComponent as Number2 } from "../assets/icons/number2.svg";
 import { ReactComponent as Number3 } from "../assets/icons/number3.svg";
 
-const AboutMe = () => {
+const AboutMe = ({aboutRef}) => {
   return (
-    <div className="w-full px-5 sm:px-10 pt-20">
+    <div className="w-full px-5 sm:px-10 pt-20" ref={aboutRef}>
       <div className="w-full font-roboto font-[400] text-[18px] sm:text-[28px] text-white py-2">
         <span className="text-[#4bffa5]">About Me</span>
       </div>
       <div className="divider"></div>
       <div className="pt-5 flex flex-col gap-8 md:flex-row md:gap-24 lg:gap-32">
-        <p className="w-full md:w-[50%] font-roboto font-[400] text-[24px] sm:text-[28px] text-white leading-snug">
+        <p className="w-full md:w-[50%] font-roboto font-[400] text-[3vh] md:text-[4vh] text-white leading-snug">
           I specialize in creating captivating websites on a global scale. Got
           you design ready? Feel free to email me, and I'll provide you with a
           time and cost estimate.

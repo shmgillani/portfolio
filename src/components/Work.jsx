@@ -28,7 +28,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router";
 
-const Work = () => {
+const Work = ({ workRef }) => {
   const navigate = useNavigate();
   var settings = {
     dots: true,
@@ -50,7 +50,7 @@ const Work = () => {
         "I have worked on this project as backend developer and used node.js with ORM (sequelize) and mysql database.",
       introImg: muallimu,
       detailedImages: [muallimu1, muallimu2, muallimu3, muallimu4, muallimu5],
-      skills: ["Node JS", "MySQL", "ORM(Sequelize)"]
+      skills: ["Node JS", "MySQL", "ORM(Sequelize)"],
     },
     {
       title: "02 Appreci",
@@ -59,8 +59,23 @@ const Work = () => {
       description:
         "I have worked as a React js developer, converted the figma into a seamless and responsive website.",
       introImg: appreci,
-      detailedImages: [appreci1, appreci2, appreci3, appreci4, appreci5, appreci6, appreci7, appreci8],
-      skills: ["React JS", "Bootstrap", "Reactstrap", "Redux", "API integrations"]
+      detailedImages: [
+        appreci1,
+        appreci2,
+        appreci3,
+        appreci4,
+        appreci5,
+        appreci6,
+        appreci7,
+        appreci8,
+      ],
+      skills: [
+        "React JS",
+        "Bootstrap",
+        "Reactstrap",
+        "Redux",
+        "API integrations",
+      ],
     },
     {
       title: "03 Swoodle",
@@ -69,15 +84,23 @@ const Work = () => {
       description:
         "I have worked as a React js developer, converted the figma into a seamless and responsive website.",
       introImg: swoodle,
-      detailedImages: [swoodle1, swoodle2, swoodle3, swoodle4, swoodle5, swoodle6, swoodle7],
-      skills: ["React JS", "Tailwind CSS", "Redux-toolkit", "API integrations"]
+      detailedImages: [
+        swoodle1,
+        swoodle2,
+        swoodle3,
+        swoodle4,
+        swoodle5,
+        swoodle6,
+        swoodle7,
+      ],
+      skills: ["React JS", "Tailwind CSS", "Redux-toolkit", "API integrations"],
     },
   ];
   const handleProjectClick = (p) => {
     navigate(`/projects/${p?.route}`, { state: { project: p } });
   };
   return (
-    <div className="w-full px-5 sm:px-10 flex flex-col gap-5">
+    <div className="w-full px-5 sm:px-10 flex flex-col gap-5" ref={workRef}>
       <div className="w-full font-roboto font-[400] text-[18px] sm:text-[28px] text-white py-2">
         <span className="text-[#4bffa5]">Work</span>
       </div>
@@ -92,11 +115,13 @@ const Work = () => {
               {project?.title}
             </p>
             <div className="divider"></div>
-            <img
-              src={project?.introImg}
-              alt="project img"
-              className="w-[100%] max-h-[400px] mt-3 rounded-[10px]"
-            />
+            <div className="w-full max-h-[400px]">
+              <img
+                src={project?.introImg}
+                alt="project img"
+                className="w-full h-full mt-3 rounded-[10px] object-cover"
+              />
+            </div>
           </div>
         ))}
       </Slider>
