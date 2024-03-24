@@ -16,3 +16,45 @@
     -100%
   ); /* Move it off the screen to the left when closing */
 }
+
+.work-slick-dots .slick-dots {
+  position: absolute !important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  bottom: -40px !important;
+  list-style: none;
+  text-align: center;
+}
+
+.work-slick-dots .slick-dots li button:before {
+  font-size: 12px !important;
+  color: #4bffa5 !important;
+  border-radius: 10px;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-next::before {
+  content: "" !important;
+  background-image: url("../assets/icons/slide-next.svg");
+  background-size: cover;
+  display: block;
+  width: 12px;
+  height: 20px;
+}
+
+.slick-prev::before {
+  content: "" !important;
+  background-image: url("../assets/icons/slide-back.svg");
+  background-size: cover;
+  display: block;
+  width: 12px;
+  height: 20px;
+}
+
