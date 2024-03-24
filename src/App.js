@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
+import Project from "./pages/Project";
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -16,6 +17,7 @@ function App() {
           <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/projects/:projectName" element={<Project />} />
           </Routes>
           <Footer />
         </Router>
