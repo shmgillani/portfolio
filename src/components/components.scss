@@ -58,3 +58,26 @@
   height: 20px;
 }
 
+@keyframes scaleLine {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
+.line {
+  width: 50px; /* Adjust width as needed */
+  height: 2px; /* Adjust height as needed */
+  background-color: #4bffa5; /* Adjust color as needed */
+  animation: scaleLine 1s linear infinite;
+  transform-origin: left;
+}
+
+.slick-prev {
+  @media (max-width: 640px) {
+    left: -15px !important;
+  }
+}

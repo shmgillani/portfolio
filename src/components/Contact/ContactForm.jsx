@@ -54,7 +54,7 @@ const ContactForm = () => {
   } = formik;
   return (
     <div className="w-full">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-2">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-3">
         <Input
           label="First Name"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"
@@ -82,7 +82,7 @@ const ContactForm = () => {
           touched={touched.lastName}
         />
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-2 mt-2 lg:mt-5">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-3 mt-2 lg:mt-5">
         <Input
           label="Inquiry"
           labelClass="font-poppins font-[400] text-[14px] text-white mb-2"

@@ -39,6 +39,26 @@ const Work = ({ workRef }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 640, // For tablets
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768, // For tablets
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1024, // For larger screens
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
 
   const projects = [
@@ -115,7 +135,7 @@ const Work = ({ workRef }) => {
               {project?.title}
             </p>
             <div className="divider"></div>
-            <div className="w-full max-h-[400px]">
+            <div className="w-full h-[200px] sm:h-[400px]">
               <img
                 src={project?.introImg}
                 alt="project img"
