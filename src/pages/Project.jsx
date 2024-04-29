@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 import "../components/components.scss";
 
@@ -6,6 +6,9 @@ const Project = () => {
   const location = useLocation();
   const { project } = location?.state;
   console.log("selected project", project);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const visitSite = () => {
     if (project?.url) {
