@@ -47,13 +47,13 @@ const Work = ({ workRef }) => {
         },
       },
       {
-        breakpoint: 768, // For tablets
+        breakpoint: 1024, // For tablets
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 1024, // For larger screens
+        breakpoint: 1600, // For larger screens
         settings: {
           slidesToShow: 3,
         },
