@@ -16,7 +16,7 @@ const Project = () => {
     }
   };
   return (
-    <div className="w-full h-full px-5 sm:px-10 py-3 sm:py-5 flex flex-col justify-between items-center">
+    <div className="w-full h-full px-5 sm:px-10 py-3 sm:py-5 flex flex-col justify-between items-center pt-[80px] sm:pt-[100px]">
       <div className="w-full h-[400px] relative">
         <img src={project?.introImg} className="absolute w-full h-full object-cover" />
       </div>
