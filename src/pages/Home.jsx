@@ -6,7 +6,7 @@ import Work from "../components/Work";
 
 const Home = ({aboutRef, workRef, contactRef}) => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full pt-[50px] sm:pt-[80px]">
       <Intro />
       <Work workRef={workRef}/>
       <AboutMe aboutRef={aboutRef}/>
