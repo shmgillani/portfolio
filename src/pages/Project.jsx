@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "../components/components.scss";
 
@@ -10,15 +10,42 @@ const Project = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (project?.detailedImages?.length) {
+      const imagesToLoad = project.detailedImages.length;
+      let loadedCount = 0;
+
+      project.detailedImages.forEach((image) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === imagesToLoad) {
+            setIsLoading(false);
+          }
+        };
+        img.src = image;
+      });
+    } else {
+      setIsLoading(false); // No images to load, set loading to false
+    }
+  }, [project]);
+
   const visitSite = () => {
     if (project?.url) {
       window.open(project.url, "_blank");
     }
   };
-  return (
+  return isLoading ? (
+    <div className="text-center text-[18px] text-[#4bffa5]">Loading images...</div>
+  ) : (
     <div className="w-full h-full px-5 sm:px-10 py-3 sm:py-5 flex flex-col justify-between items-center pt-[80px] sm:pt-[100px]">
       <div className="w-full h-[400px] relative">
-        <img src={project?.introImg} className="absolute w-full h-full object-cover" />
+        <img
+          src={project?.introImg}
+          className="absolute w-full h-full object-cover"
+        />
       </div>
       <div className="w-full flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-start mt-5 sm:mt-10">
         <div className="flex flex-col justify-start items-start">
@@ -34,7 +61,9 @@ const Project = () => {
               className="w-full font-poppins font-[400] text-[14px] sm:text-[16px] lg:text-[18px] text-[#4bffa5] cursor-pointer"
               onClick={visitSite}
             >
-              {project?.route === "muallimu-qurani" ? "visit live app →" : "visit live site →"}
+              {project?.route === "muallimu-qurani"
+                ? "visit live app →"
+                : "visit live site →"}
             </p>
           </div>
           <div className="flex gap-2 items-center mt-2">
