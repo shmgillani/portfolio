@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "../components/components.scss";
+import Loader from "../components/common/Loader";
 
 const Project = () => {
   const location = useLocation();
@@ -40,9 +41,7 @@ const Project = () => {
   return (
     <div className="w-full h-full px-5 sm:px-10 py-3 sm:py-5 flex flex-col justify-between items-center pt-[80px] sm:pt-[100px]">
       {isLoading === true ? (
-        <div className="text-center text-[48px] text-[#4bffa5]">
-          Loading images...
-        </div>
+        <Loader />
       ) : (
         <>
           <div className="w-full h-[400px] relative">
