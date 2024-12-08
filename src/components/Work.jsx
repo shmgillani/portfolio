@@ -130,7 +130,7 @@ const Work = ({ workRef }) => {
     {
       title: "03 Swoodle",
       route: "swoodle",
-      url: "https://dev-panel.swoodle-dev.xyz",
+      url: "https://swoodle.com.au/",
       description:
         "I have worked as a React js developer, converted the figma into a seamless and responsive website.",
       introImg: swoodle,
