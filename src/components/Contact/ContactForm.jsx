@@ -126,7 +126,7 @@ const ContactForm = () => {
       <div className="text-end mt-5">
         <PrimaryButton
           className={
-            "w-[30%] font-montserrat text-[14px] text-center font-[500] h-[45px] rounded-[5px]"
+            "w-[30%] font-montserrat text-[14px] text-center font-[600] h-[50px] rounded-[5px]"
           }
           label="Submit"
           onClick={handleSubmit}

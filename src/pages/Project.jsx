@@ -45,7 +45,7 @@ const Project = () => {
         <div className="w-full h-[400px] relative">
           <img
             src={project?.introImg}
-            className="absolute w-full h-full object-cover"
+            className="absolute w-full h-full object-cover object-top"
           />
         </div>
         <div className="w-full flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-start mt-5 sm:mt-10">

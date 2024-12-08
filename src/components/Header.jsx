@@ -50,7 +50,10 @@ const Header = ({ isNavOpen, setIsNavOpen, aboutRef, workRef, contactRef }) => {
       <div className="w-full flex flex-row-reverse sm:flex-row justify-between items-center bg-slate-800 px-5 sm:px-10 py-3 sm:py-5 fixed z-10">
         <span
           className="font-montserrat font-[700] text-[16px] sm:text-[18px] text-white tracking-[3px] cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           SHM
           <span className="text-[#4bffa5]">GILLANI</span>.

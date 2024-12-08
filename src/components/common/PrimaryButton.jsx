@@ -3,7 +3,7 @@ import React from "react";
 const PrimaryButton = ({ label, className, onClick }) => {
   return (
     <button
-      className={`bg-[#4bffa5] text-white font-poppins text-center ${
+      className={`bg-slate-900 text-white border border-[#4bffa5] font-poppins text-center hover:bg-[#4bffa5] hover:text-slate-900 ${
         className ? className : null
       }`}
       onClick={onClick}
